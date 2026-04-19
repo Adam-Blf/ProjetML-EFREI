@@ -15,6 +15,7 @@ warnings.filterwarnings("ignore")
 import numpy as np
 import pandas as pd
 from fpdf import FPDF
+from PIL import Image
 
 ROOT = Path(__file__).parent
 FIG = ROOT / "figures"
@@ -167,8 +168,9 @@ class Rapport(FPDF):
         self.set_y(-14)
         self.set_font(self.base_font, "", 8)
         self.set_text_color(*GREY)
-        self.cell(0, 6, f"Adam BELOUCIF - Emilien MORICE - EFREI Paris - M1 Data & IA", align="L")
-        self.cell(0, 6, f"Page {self.page_no()}", align="R")
+        usable = self.w - self.l_margin - self.r_margin
+        self.cell(usable * 0.75, 6, "Adam BELOUCIF - Emilien MORICE - EFREI Paris - M1 Data & IA", align="L")
+        self.cell(usable * 0.25, 6, f"Page {self.page_no()}", align="R")
 
     # -- Styles -----------------------------------------------------------
     def h1(self, text):
@@ -210,15 +212,22 @@ class Rapport(FPDF):
     def figure(self, path: Path, caption: str, w: float = 160):
         if not path.exists():
             return
-        # Centree
-        x = (self.w - w) / 2
-        if self.get_y() > self.h - 80:
+        # Hauteur reelle d'apres l'image
+        with Image.open(path) as im:
+            ratio = im.size[1] / im.size[0]
+        h = w * ratio
+        caption_h = 7
+        needed = h + caption_h + 4
+        # Page break si pas la place (margin de securite + auto break margin 18)
+        if self.get_y() + needed > self.h - 18:
             self.add_page()
-        self.image(str(path), x=x, y=self.get_y(), w=w)
-        self.ln(w * 0.72)
+        x = (self.w - w) / 2
+        y = self.get_y()
+        self.image(str(path), x=x, y=y, w=w)
+        self.set_y(y + h + 1)
         self.set_font(self.base_font, "I", 9)
         self.set_text_color(*GREY)
-        self.cell(0, 5, caption, align="C", new_x="LMARGIN", new_y="NEXT")
+        self.cell(0, caption_h, caption, align="C", new_x="LMARGIN", new_y="NEXT")
         self.ln(3)
 
 

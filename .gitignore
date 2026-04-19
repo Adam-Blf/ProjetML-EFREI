@@ -24,6 +24,9 @@ desktop.ini
 .vscode/
 *.swp
 
+# Documents fournis par le prof (non diffusables)
+prof/
+
 # Local artifacts (optional: uncomment to exclude)
 # rapport.pdf
 # results.json
