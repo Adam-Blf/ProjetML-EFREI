@@ -27,6 +27,9 @@ desktop.ini
 # Documents fournis par le prof (non diffusables)
 prof/
 
-# Local artifacts (optional: uncomment to exclude)
-# rapport.pdf
-# results.json
+# Outils de reproduction / artefacts locaux (non livrables)
+build_notebook.py
+rapport.py
+figures/
+assets/
+results.json
