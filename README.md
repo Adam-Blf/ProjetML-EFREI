@@ -23,7 +23,7 @@
 | | |
 |---|---|
 | **Adam BELOUCIF** | [![GitHub](https://img.shields.io/badge/GitHub-Adam--Blf-181717?style=flat&logo=github&logoColor=white)](https://github.com/Adam-Blf) [![Email](https://img.shields.io/badge/Email-adambeloucif%40gmail.com-EA4335?style=flat&logo=gmail&logoColor=white)](mailto:adambeloucif@gmail.com) |
-| **Emilien MORICE** | *Binôme M1 Data Engineering & IA · EFREI Paris* |
+| **Emilien MORICE** | [![GitHub](https://img.shields.io/badge/GitHub-emilien754-181717?style=flat&logo=github&logoColor=white)](https://github.com/emilien754) |
 
 ---
 
