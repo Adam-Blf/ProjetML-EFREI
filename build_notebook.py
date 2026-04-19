@@ -153,8 +153,9 @@ df["quality_binary"] = (df["quality"] >= 7).astype(int)
 counts = df["quality_binary"].value_counts().sort_index()
 axes[1].bar(["Ordinaire (<7)", "Bon (>=7)"], counts.values, color=["#e74c3c", "#2ecc71"])
 axes[1].set_title("Cible binaire : vin de qualite vs ordinaire")
+axes[1].set_ylim(0, max(counts.values) * 1.18)  # headroom pour les labels
 for i, v in enumerate(counts.values):
-    axes[1].text(i, v, f"{v}\\n({v/len(df)*100:.1f}%)", ha="center", va="bottom")
+    axes[1].text(i, v + max(counts.values) * 0.02, f"{v}\\n({v/len(df)*100:.1f}%)", ha="center", va="bottom")
 plt.tight_layout()
 plt.savefig(FIG_DIR / "01_target_distribution.png", bbox_inches="tight")
 plt.show()
