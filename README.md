@@ -113,3 +113,10 @@ Code sous licence [MIT](LICENSE). Dataset Wine Quality © Cortez et al., 2009.
 *Projet réalisé dans le cadre du [Mastère Data Engineering & IA](https://www.efrei.fr/programmes-experts/mastere-data-engineering/) · [EFREI Paris Panthéon-Assas](https://www.efrei.fr) · 2025-2026*
 
 </div>
+
+
+---
+
+<p align="center">
+  <sub>Par <a href="https://adam.beloucif.com">Adam Beloucif</a> · Data Engineer & Fullstack Developer · <a href="https://github.com/Adam-Blf">GitHub</a> · <a href="https://www.linkedin.com/in/adambeloucif/">LinkedIn</a></sub>
+</p>
