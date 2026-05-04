@@ -2,6 +2,11 @@
 
 # 🍷 Projet Machine Learning · Wine Quality
 
+<!-- adam-badges:start -->
+[![commits](https://img.shields.io/github/commit-activity/t/Adam-Blf/ProjetML-EFREI?color=001329&label=commits&style=flat-square)](https://github.com/Adam-Blf/ProjetML-EFREI/commits) [![visites](https://hits.sh/github.com/Adam-Blf/ProjetML-EFREI.svg?style=flat-square&label=visites&color=001329)](https://hits.sh/github.com/Adam-Blf/ProjetML-EFREI/) [![last commit](https://img.shields.io/github/last-commit/Adam-Blf/ProjetML-EFREI?color=D4A437&style=flat-square&label=dernier%20push)](https://github.com/Adam-Blf/ProjetML-EFREI/commits) [![top language](https://img.shields.io/github/languages/top/Adam-Blf/ProjetML-EFREI?style=flat-square)](https://github.com/Adam-Blf/ProjetML-EFREI) [![license](https://img.shields.io/github/license/Adam-Blf/ProjetML-EFREI?style=flat-square&color=D4A437)](LICENSE)
+<!-- adam-badges:end -->
+
+
 *Prédiction de la qualité d'un vin à partir de ses propriétés physico-chimiques*
 
 [![Python](https://img.shields.io/badge/Python-3.12-3776AB?style=flat&logo=python&logoColor=white)](https://www.python.org/)
