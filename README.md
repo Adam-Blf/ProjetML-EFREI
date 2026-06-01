@@ -32,6 +32,28 @@
 
 ---
 
+## Architecture
+
+```mermaid
+flowchart TB
+    DATA["data/<br/>winequality-red · winequality-white"]
+    LOAD["Chargement Pandas<br/>fusion rouge + blanc"]
+    EDA["EDA<br/>distributions · corrélations · doublons"]
+    PREP["Préparation<br/>nettoyage · binarisation qualité · split"]
+    UNSUP["Non supervisé<br/>PCA + KMeans"]
+    MODELS["Modèles<br/>LogReg · Random Forest · XGBoost"]
+    EVAL["Évaluation<br/>accuracy · precision · recall · F1"]
+    REPORT["rapport.pdf<br/>fpdf2 · synthèse"]
+
+    DATA --> LOAD
+    LOAD --> EDA
+    EDA --> PREP
+    PREP --> UNSUP
+    PREP --> MODELS
+    MODELS --> EVAL
+    EVAL --> REPORT
+```
+
 ## 🎯 Contexte
 
 Projet académique du **Mastère Data Engineering & IA** à l'EFREI Paris Panthéon-Assas · Master 1 · avril 2026.
@@ -41,7 +63,7 @@ La qualité d'un vin est habituellement évaluée par des œnologues experts, ce
 ## 🧪 Méthodologie
 
 ### Données
-- **Dataset** : [Wine Quality](https://archive.ics.uci.edu/ml/datasets/wine+quality) (UCI / Kaggle) — Vinho Verde portugais
+- **Dataset** : [Wine Quality](https://archive.ics.uci.edu/ml/datasets/wine+quality) (UCI / Kaggle) · Vinho Verde portugais
 - **Taille** : ~5 300 vins (rouges + blancs) après déduplication
 - **Cible** : classification binaire `quality >= 7` (bon vin vs ordinaire) · ~20 % de positifs
 
@@ -54,13 +76,13 @@ La qualité d'un vin est habituellement évaluée par des œnologues experts, ce
 | Modèle | Famille |
 |---|---|
 | Logistic Regression | Baseline linéaire |
-| **Random Forest** | Ensemble — bagging |
-| **Gradient Boosting** | Ensemble — boosting (sklearn) |
-| **XGBoost** | Ensemble — boosting optimisé |
+| **Random Forest** | Ensemble · bagging |
+| **Gradient Boosting** | Ensemble · boosting (sklearn) |
+| **XGBoost** | Ensemble · boosting optimisé |
 
 ### Analyse non supervisée
-- **PCA** 2D — réduction de dimension pour visualisation
-- **KMeans** (k = 3) — segmentation en profils de vins
+- **PCA** 2D · réduction de dimension pour visualisation
+- **KMeans** (k = 3) · segmentation en profils de vins
 
 ## 📊 Résultats
 
