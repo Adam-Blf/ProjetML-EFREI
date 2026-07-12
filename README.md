@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🍷 Projet Machine Learning · Wine Quality
+# 🍷 Projet Machine Learning - Wine Quality
 
 <!-- adam-badges:start -->
 [![commits](https://img.shields.io/github/commit-activity/t/Adam-Blf/ProjetML-EFREI?color=001329&label=commits&style=flat-square)](https://github.com/Adam-Blf/ProjetML-EFREI/commits) [![visites](https://hits.sh/github.com/Adam-Blf/ProjetML-EFREI.svg?style=flat-square&label=visites&color=001329)](https://hits.sh/github.com/Adam-Blf/ProjetML-EFREI/) [![last commit](https://img.shields.io/github/last-commit/Adam-Blf/ProjetML-EFREI?color=D4A437&style=flat-square&label=dernier%20push)](https://github.com/Adam-Blf/ProjetML-EFREI/commits) [![top language](https://img.shields.io/github/languages/top/Adam-Blf/ProjetML-EFREI?style=flat-square)](https://github.com/Adam-Blf/ProjetML-EFREI) [![license](https://img.shields.io/github/license/Adam-Blf/ProjetML-EFREI?style=flat-square&color=D4A437)](LICENSE)
@@ -36,14 +36,14 @@
 
 ```mermaid
 flowchart TB
-    DATA["data/<br/>winequality-red · winequality-white"]
+    DATA["data/<br/>winequality-red - winequality-white"]
     LOAD["Chargement Pandas<br/>fusion rouge + blanc"]
-    EDA["EDA<br/>distributions · corrélations · doublons"]
-    PREP["Préparation<br/>nettoyage · binarisation qualité · split"]
+    EDA["EDA<br/>distributions - corrélations - doublons"]
+    PREP["Préparation<br/>nettoyage - binarisation qualité - split"]
     UNSUP["Non supervisé<br/>PCA + KMeans"]
-    MODELS["Modèles<br/>LogReg · Random Forest · XGBoost"]
-    EVAL["Évaluation<br/>accuracy · precision · recall · F1"]
-    REPORT["rapport.pdf<br/>fpdf2 · synthèse"]
+    MODELS["Modèles<br/>LogReg - Random Forest - XGBoost"]
+    EVAL["Évaluation<br/>accuracy - precision - recall - F1"]
+    REPORT["rapport.pdf<br/>fpdf2 - synthèse"]
 
     DATA --> LOAD
     LOAD --> EDA
@@ -56,33 +56,33 @@ flowchart TB
 
 ## 🎯 Contexte
 
-Projet académique du **Mastère Data Engineering & IA** à l'EFREI Paris Panthéon-Assas · Master 1 · avril 2026.
+Projet académique du **Mastère Data Engineering & IA** à l'EFREI Paris Panthéon-Assas - Master 1 - avril 2026.
 
 La qualité d'un vin est habituellement évaluée par des œnologues experts, ce qui est coûteux et subjectif. Les propriétés physico-chimiques d'un vin sont mesurables à bas coût. **Objectif** : automatiser le scoring de qualité à partir de ces mesures.
 
 ## 🧪 Méthodologie
 
 ### Données
-- **Dataset** : [Wine Quality](https://archive.ics.uci.edu/ml/datasets/wine+quality) (UCI / Kaggle) · Vinho Verde portugais
+- **Dataset** : [Wine Quality](https://archive.ics.uci.edu/ml/datasets/wine+quality) (UCI / Kaggle) - Vinho Verde portugais
 - **Taille** : ~5 300 vins (rouges + blancs) après déduplication
-- **Cible** : classification binaire `quality >= 7` (bon vin vs ordinaire) · ~20 % de positifs
+- **Cible** : classification binaire `quality >= 7` (bon vin vs ordinaire) - ~20 % de positifs
 
 ### Pipeline
 - `ColumnTransformer` + `StandardScaler` + `OneHotEncoder` (zéro fuite train/test)
 - Encapsulation de chaque modèle dans un `sklearn.pipeline.Pipeline`
-- Split stratifié 80 / 20 · cross-validation 5-folds
+- Split stratifié 80 / 20 - cross-validation 5-folds
 
 ### Modèles comparés
 | Modèle | Famille |
 |---|---|
 | Logistic Regression | Baseline linéaire |
-| **Random Forest** | Ensemble · bagging |
-| **Gradient Boosting** | Ensemble · boosting (sklearn) |
-| **XGBoost** | Ensemble · boosting optimisé |
+| **Random Forest** | Ensemble - bagging |
+| **Gradient Boosting** | Ensemble - boosting (sklearn) |
+| **XGBoost** | Ensemble - boosting optimisé |
 
 ### Analyse non supervisée
-- **PCA** 2D · réduction de dimension pour visualisation
-- **KMeans** (k = 3) · segmentation en profils de vins
+- **PCA** 2D - réduction de dimension pour visualisation
+- **KMeans** (k = 3) - segmentation en profils de vins
 
 ## 📊 Résultats
 
@@ -93,9 +93,9 @@ La qualité d'un vin est habituellement évaluée par des œnologues experts, ce
 | Gradient Boosting | 0.844 | 0.648 | 0.391 | 0.488 | 0.852 |
 | **XGBoost** ⭐ | **0.834** | **0.557** | **0.609** | **0.582** | **0.858** |
 
-**Meilleur modèle (F1)** : XGBoost · il équilibre le mieux précision et recall sur la classe minoritaire.
+**Meilleur modèle (F1)** : XGBoost - il équilibre le mieux précision et recall sur la classe minoritaire.
 
-**Variables les plus discriminantes** : alcool · sulfates · acidité volatile.
+**Variables les plus discriminantes** : alcool - sulfates - acidité volatile.
 
 ## 📦 Contenu du dépôt
 
@@ -120,14 +120,14 @@ jupyter notebook notebook.ipynb
 
 ## 📚 Structure du notebook (cahier des charges)
 
-1. **Problème** · contexte métier + objectifs
-2. **Données** · source, description, limitations
-3. **EDA** · analyse exploratoire + PCA + KMeans
-4. **Préparation** · nettoyage + feature engineering
-5. **Modélisation** · 4 modèles comparés
-6. **Évaluation** · métriques adaptées au déséquilibre
-7. **Analyse** · interprétation + importance des variables
-8. **Conclusion** · recommandations + travaux futurs
+1. **Problème** - contexte métier + objectifs
+2. **Données** - source, description, limitations
+3. **EDA** - analyse exploratoire + PCA + KMeans
+4. **Préparation** - nettoyage + feature engineering
+5. **Modélisation** - 4 modèles comparés
+6. **Évaluation** - métriques adaptées au déséquilibre
+7. **Analyse** - interprétation + importance des variables
+8. **Conclusion** - recommandations + travaux futurs
 
 ## 📄 Licence
 
@@ -137,7 +137,7 @@ Code sous licence [MIT](LICENSE). Dataset Wine Quality © Cortez et al., 2009.
 
 <div align="center">
 
-*Projet réalisé dans le cadre du [Mastère Data Engineering & IA](https://www.efrei.fr/programmes-experts/mastere-data-engineering/) · [EFREI Paris Panthéon-Assas](https://www.efrei.fr) · 2025-2026*
+*Projet réalisé dans le cadre du [Mastère Data Engineering & IA](https://www.efrei.fr/programmes-experts/mastere-data-engineering/) - [EFREI Paris Panthéon-Assas](https://www.efrei.fr) - 2025-2026*
 
 </div>
 
@@ -145,7 +145,7 @@ Code sous licence [MIT](LICENSE). Dataset Wine Quality © Cortez et al., 2009.
 ---
 
 <p align="center">
-  <sub>Par <a href="https://adam.beloucif.com">Adam Beloucif</a> · Data Engineer & Fullstack Developer · <a href="https://github.com/Adam-Blf">GitHub</a> · <a href="https://www.linkedin.com/in/adambeloucif/">LinkedIn</a></sub>
+  <sub>Par <a href="https://adam.beloucif.com">Adam Beloucif</a> - Data Engineer & Fullstack Developer - <a href="https://github.com/Adam-Blf">GitHub</a> - <a href="https://www.linkedin.com/in/adambeloucif/">LinkedIn</a></sub>
 </p>
 
 
