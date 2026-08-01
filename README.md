@@ -8,7 +8,6 @@
 [![commits](https://img.shields.io/github/commit-activity/t/Adam-Blf/ProjetML-EFREI?color=001329&label=commits&style=flat-square)](https://github.com/Adam-Blf/ProjetML-EFREI/commits) [![visites](https://hits.sh/github.com/Adam-Blf/ProjetML-EFREI.svg?style=flat-square&label=visites&color=001329)](https://hits.sh/github.com/Adam-Blf/ProjetML-EFREI/) [![last commit](https://img.shields.io/github/last-commit/Adam-Blf/ProjetML-EFREI?color=D4A437&style=flat-square&label=dernier%20push)](https://github.com/Adam-Blf/ProjetML-EFREI/commits) [![top language](https://img.shields.io/github/languages/top/Adam-Blf/ProjetML-EFREI?style=flat-square)](https://github.com/Adam-Blf/ProjetML-EFREI) [![license](https://img.shields.io/github/license/Adam-Blf/ProjetML-EFREI?style=flat-square&color=D4A437)](LICENSE)
 <!-- adam-badges:end -->
 
-
 *Prédiction de la qualité d'un vin à partir de ses propriétés physico-chimiques*
 
 [![Python](https://img.shields.io/badge/Python-3.12-3776AB?style=flat&logo=python&logoColor=white)](https://www.python.org/)
@@ -143,20 +142,12 @@ Code sous licence [MIT](LICENSE). Dataset Wine Quality © Cortez et al., 2009.
 
 </div>
 
-
 ---
 
 <p align="center">
   <sub>Par <a href="https://adam.beloucif.com">Adam Beloucif</a> - Data Engineer & Fullstack Developer - <a href="https://github.com/Adam-Blf">GitHub</a> - <a href="https://www.linkedin.com/in/adambeloucif/">LinkedIn</a></sub>
 </p>
 
-
-## Star History
-
-<a href="https://www.star-history.com/?repos=Adam-Blf%2FProjetML-EFREI&type=date&legend=top-left">
  <picture>
-   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/chart?repos=Adam-Blf/ProjetML-EFREI&type=date&theme=dark&legend=top-left" />
-   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/chart?repos=Adam-Blf/ProjetML-EFREI&type=date&legend=top-left" />
-   <img alt="Star History Chart" src="https://api.star-history.com/chart?repos=Adam-Blf/ProjetML-EFREI&type=date&legend=top-left" />
  </picture>
 </a>
