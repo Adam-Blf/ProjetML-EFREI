@@ -53,6 +53,21 @@ flowchart TB
     PREP --> MODELS
     MODELS --> EVAL
     EVAL --> REPORT
+
+    classDef c0 fill:#2563eb,stroke:#1e3a8a,stroke-width:2px,color:#ffffff
+    classDef c1 fill:#7c3aed,stroke:#4c1d95,stroke-width:2px,color:#ffffff
+    classDef c2 fill:#0891b2,stroke:#164e63,stroke-width:2px,color:#ffffff
+    classDef c3 fill:#16a34a,stroke:#14532d,stroke-width:2px,color:#ffffff
+    classDef c4 fill:#d97706,stroke:#78350f,stroke-width:2px,color:#ffffff
+    classDef c5 fill:#db2777,stroke:#831843,stroke-width:2px,color:#ffffff
+    classDef c6 fill:#dc2626,stroke:#7f1d1d,stroke-width:2px,color:#ffffff
+    class DATA c0
+    class LOAD c1
+    class EDA c2
+    class PREP c3
+    class UNSUP,MODELS c4
+    class EVAL c5
+    class REPORT c6
 ```
 
 ## 🎯 Contexte
